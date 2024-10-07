@@ -13,5 +13,10 @@
             <li>[[${str}]]</li>
         </th:block>
     </ul>
+    <ul>
+        <li th:each="str, status: ${list}">
+            [[${status.index}]] -- [[${str}]]
+        </li>
+    </ul>
 </body>
 </html>
