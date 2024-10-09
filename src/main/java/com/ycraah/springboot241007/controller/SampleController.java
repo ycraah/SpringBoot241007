@@ -22,6 +22,12 @@ public class SampleController {
   public String ex1(Model model) {
     List<String> list = Arrays.asList("AAA", "BBB", "CCC", "DDD");
     model.addAttribute("list", list);
-    return "ex1";
+    return "/ex/ex1";
+  }
+
+  @GetMapping("/ex/ex3")
+  public String ex3(Model model) {
+    model.addAttribute("list", Arrays.asList("AAA", "BBB", "CCC", "DDD"));
+    return "/ex/ex3";
   }
 }
