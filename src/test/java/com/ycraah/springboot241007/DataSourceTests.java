@@ -17,10 +17,8 @@ public class DataSourceTests {
   private BoardRepository boardRepository;
 
   @Test
-  public void testSelect() {
-    Long bno = 100L;
-    Optional<Board> result = boardRepository.findById(bno);
-    Board board = result.orElseThrow();
-    log.info(board);
+  public void testDelete() {
+   Long bno = 1L;
+   boardRepository.deleteById(bno);
   }
 }
